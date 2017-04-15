@@ -16,4 +16,8 @@ class User < ApplicationRecord
     # # 取 email 的前半来显示，如果你也可以开一个字段是 nickname 让用户可以编辑显示名称
     self.email.split("@").first
   end
+
+  def is_admin?
+    role == "admin"
+  end
 end
